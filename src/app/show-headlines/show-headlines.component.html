@@ -1,9 +1,12 @@
 <h1>Show Headlines</h1>
 <table>
   <div *ngFor="let headline of headlines">
-    <ul>
-      <li>{{headline.title}}</li>
-      <li>{{headline.source}}</li>
+    <ul class="headlineUl">
+      <li> <strong>Titel:</strong> {{headline.title}}</li>
+      <li><strong>Author:</strong> {{headline.author}}</li>
+      <li><strong>Quelle:</strong> {{headline.source}}</li>
+      <li><strong>Datum der Veröffentlichung:</strong> {{headline.publicationDate}}</li>
+      <li><strong>Inhalt:</strong> {{headline.content}}</li>
     </ul>
   </div>
 
