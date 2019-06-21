@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ShowHeadlinesComponent } from './show-headlines/show-headlines.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ShowHeadlinesComponent
   ],
   imports: [
     BrowserModule,
