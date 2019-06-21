@@ -1,3 +1,10 @@
-<p>
-  show-headlines works!
-</p>
+<h1>Show Headlines</h1>
+<table>
+  <div *ngFor="let headline of headlines">
+    <ul>
+      <li>{{headline.title}}</li>
+      <li>{{headline.source}}</li>
+    </ul>
+  </div>
+
+</table>
