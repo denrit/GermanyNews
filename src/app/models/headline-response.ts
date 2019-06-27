@@ -1,4 +1,8 @@
-export class Headline {
+interface Interface {
+  
+}
+
+export class HeadlineResponse {
   title: string;
   author: string;
   source: string;
