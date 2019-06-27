@@ -1,10 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {HeadlineResponse} from '../models/headline-response';
 import {NewsService} from '../services/news.service';
+import {SourceResponse} from '../models/source-response';
+import {Headline} from '../models/headline';
 
-const ELEMENT_DATA: HeadlineResponse[] = [
-  {title: 'testTitle', author: 'testAuthor', source: 'testSource', publicationDate: new Date('01/23/2000'), content: 'testContent'}
-];
 
 @Component({
   selector: 'app-show-headlines',
@@ -16,15 +15,11 @@ export class ShowHeadlinesComponent implements OnInit {
   constructor(private news: NewsService) {
   }
 
-  headlines: HeadlineResponse[];
+  public headlines: Headline[];
 
   ngOnInit() {
-    this.headlines = ELEMENT_DATA;
-  }
-
-  onClick() {
-    this.news.showAlert().subscribe((data: any[]) => {
-      console.log(data);
+    this.news.getArticles().subscribe((data: HeadlineResponse) => {
+      this.headlines = data.articles;
     });
   }
 }

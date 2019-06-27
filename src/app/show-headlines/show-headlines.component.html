@@ -1,12 +1,12 @@
 <h1>Show Headlines</h1>
+<div *ngIf="!headlines">Laden...</div>
 <table>
-  <button (click)="onClick()">blub</button>
   <div *ngFor="let headline of headlines">
     <ul class="headlineUl">
       <li> <strong>Titel:</strong> {{headline.title}}</li>
       <li><strong>Author:</strong> {{headline.author}}</li>
-      <li><strong>Quelle:</strong> {{headline.source}}</li>
-      <li><strong>Datum der Veröffentlichung:</strong> {{headline.publicationDate}}</li>
+      <li><strong>Quelle:</strong> {{headline.source.name}}</li>
+      <li><strong>Datum der Veröffentlichung:</strong> {{headline.publishedAt}}</li>
       <li><strong>Inhalt:</strong> {{headline.content}}</li>
     </ul>
   </div>
