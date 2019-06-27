@@ -20,4 +20,8 @@ export class ShowSourcesComponent implements OnInit {
     });
   }
 
+  showHeadlineFromSource(source: string) {
+    alert(source);
+  }
+
 }
