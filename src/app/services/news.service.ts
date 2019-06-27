@@ -18,4 +18,8 @@ export class NewsService {
   getSources() {
     return this.http.get<SourceResponse>('https://newsapi.org/v2/sources?country=de&apiKey=b81021b4d9704615af3ed9c6e754d6d0');
   }
+
+  getHeadlinesFromsource(source: string) {
+    return this.http.get<SourceResponse>(`https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=b81021b4d9704615af3ed9c6e754d6d0`);
+  }
 }
