@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {SourceResponse} from '../models/source-response';
+import {HeadlineResponse} from '../models/headline-response';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +11,8 @@ export class NewsService {
   }
 
 
-  showAlert() {
-    return this.http.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=b81021b4d9704615af3ed9c6e754d6d0');
+  getArticles() {
+    return this.http.get<HeadlineResponse>('https://newsapi.org/v2/top-headlines?country=us&apiKey=b81021b4d9704615af3ed9c6e754d6d0');
   }
 
   getSources() {

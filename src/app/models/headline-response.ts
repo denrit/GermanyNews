@@ -1,12 +1,7 @@
-interface Interface {
-  
-}
+import {Headline} from './headline';
 
 export class HeadlineResponse {
-  title: string;
-  author: string;
-  source: string;
-  publicationDate: Date;
-  content: string;
-  constructor() {}
+  public status: string;
+  public totalResults: number;
+  public articles: Headline[];
 }
