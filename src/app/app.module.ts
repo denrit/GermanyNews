@@ -11,6 +11,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {ShowSourcesComponent} from './show-sources/show-sources.component';
 import {HttpClientModule} from '@angular/common/http';
 import { SearchArticlesComponent } from './search-articles/search-articles.component';
+import { ShowHeadlinesFromSourceComponent } from './show-headlines-from-source/show-headlines-from-source.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { SearchArticlesComponent } from './search-articles/search-articles.compo
     ShowHeadlinesComponent,
     NavigationComponent,
     ShowSourcesComponent,
-    SearchArticlesComponent
+    SearchArticlesComponent,
+    ShowHeadlinesFromSourceComponent
   ],
   imports: [
     BrowserModule,

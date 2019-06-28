@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {NewsService} from '../services/news.service';
 import {Source} from '../models/source';
 import {SourceResponse} from '../models/source-response';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-show-sources',
@@ -12,7 +14,10 @@ export class ShowSourcesComponent implements OnInit {
 
   public sources: Array<Source>;
 
-  constructor(private newsService: NewsService) { }
+  constructor(
+    private newsService: NewsService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.newsService.getSources().subscribe((data: SourceResponse) => {
@@ -21,7 +26,8 @@ export class ShowSourcesComponent implements OnInit {
   }
 
   showHeadlineFromSource(source: string) {
-    alert(source);
+    this.newsService.source = source;
+    this.router.navigate(['/', 'showHeadlinesFromSource']);
   }
 
 }

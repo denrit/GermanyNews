@@ -10,6 +10,7 @@ export class NewsService {
   constructor(private http: HttpClient) {
   }
 
+  public source: string;
 
   getArticles() {
     return this.http.get<ArticleResponse>('https://newsapi.org/v2/top-headlines?country=de&apiKey=b81021b4d9704615af3ed9c6e754d6d0');
@@ -21,5 +22,9 @@ export class NewsService {
 
   getSerachedArticles(searchWord) {
     return this.http.get<ArticleResponse>('https://newsapi.org/v2/everything?q=' + searchWord + '&apiKey=b81021b4d9704615af3ed9c6e754d6d0');
+  }
+  getHeadlinesFromSource() {
+    return this.http.
+    get<ArticleResponse>(`https://newsapi.org/v2/top-headlines?sources=${this.source}&apiKey=b81021b4d9704615af3ed9c6e754d6d0`);
   }
 }
