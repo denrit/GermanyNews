@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ShowHeadlinesComponent } from './show-headlines/show-headlines.component';
+import { ShowHeadlinesComponent } from './show-articles/show-headlines.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -10,8 +10,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {ShowSourcesComponent} from './show-sources/show-sources.component';
 import {HttpClientModule} from '@angular/common/http';
-import { SearchArticlesComponent } from './search-articles/search-articles.component';
 import { ShowHeadlinesFromSourceComponent } from './show-headlines-from-source/show-headlines-from-source.component';
+import {FormsModule} from '@angular/forms';
+
 
 
 @NgModule({
@@ -20,7 +21,6 @@ import { ShowHeadlinesFromSourceComponent } from './show-headlines-from-source/s
     ShowHeadlinesComponent,
     NavigationComponent,
     ShowSourcesComponent,
-    SearchArticlesComponent,
     ShowHeadlinesFromSourceComponent
   ],
   imports: [
@@ -30,7 +30,8 @@ import { ShowHeadlinesFromSourceComponent } from './show-headlines-from-source/s
     MatExpansionModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

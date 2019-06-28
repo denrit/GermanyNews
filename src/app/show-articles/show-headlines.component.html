@@ -1,0 +1,20 @@
+<input type="text" [(ngModel)]="searchWord" (keyup)="searchArticles()" placeholder="search">
+<h1 *ngIf="searchWord">Search '{{searchWord}}'</h1>
+<h1 *ngIf="!searchWord">Show Headlines</h1>
+<div *ngIf="!articles">
+  <mat-spinner id="sourceProgressSpinner"></mat-spinner>
+</div>
+<mat-accordion>
+  <div *ngFor="let article of articles">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+         <strong>{{article.title}}</strong>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p><strong>Autor:</strong> {{article.author}}</p>
+      <p><strong>Datum:</strong> {{article.publishedAt}}</p>
+      <p><strong>Text:</strong> {{article.content}}</p>
+    </mat-expansion-panel>
+  </div>
+</mat-accordion>
