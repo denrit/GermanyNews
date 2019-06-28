@@ -27,7 +27,7 @@ export class ShowSourcesComponent implements OnInit {
 
   showHeadlineFromSource(source: string) {
     this.newsService.source = source;
-    this.router.navigate(['/', 'headlinesFromSource']);
+    this.router.navigate(['/', 'showHeadlinesFromSource']);
   }
 
 }

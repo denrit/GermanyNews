@@ -7,7 +7,7 @@ import {ShowHeadlinesFromSourceComponent} from './show-headlines-from-source/sho
 const routes: Routes = [
   {path: '', component: ShowHeadlinesComponent},
   {path: 'sources', component: ShowSourcesComponent},
-  {path: 'headlinesFromSources', component: ShowHeadlinesFromSourceComponent}
+  {path: 'showHeadlinesFromSource', component: ShowHeadlinesFromSourceComponent}
 
 ];
 
