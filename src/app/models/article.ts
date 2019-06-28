@@ -1,6 +1,6 @@
 import {Source} from './source';
 
-export class Headline {
+export class Article {
   public source: Source;
   public author: string;
   public title: string;

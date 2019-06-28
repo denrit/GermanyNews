@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {HeadlineResponse} from '../models/headline-response';
+import {ArticleResponse} from '../models/article-response';
 import {NewsService} from '../services/news.service';
 import {SourceResponse} from '../models/source-response';
-import {Headline} from '../models/headline';
+import {Article} from '../models/article';
 
 
 @Component({
@@ -15,10 +15,10 @@ export class ShowHeadlinesComponent implements OnInit {
   constructor(private news: NewsService) {
   }
 
-  public headlines: Headline[];
+  public headlines: Article[];
 
   ngOnInit() {
-    this.news.getArticles().subscribe((data: HeadlineResponse) => {
+    this.news.getArticles().subscribe((data: ArticleResponse) => {
       this.headlines = data.articles;
     });
   }
