@@ -10,6 +10,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {ShowSourcesComponent} from './show-sources/show-sources.component';
 import {HttpClientModule} from '@angular/common/http';
+import { ShowHeadlinesFromSourceComponent } from './show-headlines-from-source/show-headlines-from-source.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {HttpClientModule} from '@angular/common/http';
     AppComponent,
     ShowHeadlinesComponent,
     NavigationComponent,
-    ShowSourcesComponent
+    ShowSourcesComponent,
+    ShowHeadlinesFromSourceComponent
   ],
   imports: [
     BrowserModule,
