@@ -20,7 +20,7 @@ export class ShowHeadlinesComponent implements OnInit {
   public searchWord: string;
 
   searchArticles() {
-    //this.articles = null;
+    this.articles = null;
     if (this.searchWord) {
       this.news.getSerachedArticles(this.searchWord).subscribe((data: ArticleResponse) => {
         this.articles = data.articles;
