@@ -1,14 +1,18 @@
 <h1>Show Headlines</h1>
-<div *ngIf="!headlines">Laden...</div>
-<table>
+<div *ngIf="!headlines">
+  <mat-spinner id="sourceProgressSpinner"></mat-spinner>
+</div>
+<mat-accordion>
   <div *ngFor="let headline of headlines">
-    <ul class="headlineUl">
-      <li> <strong>Titel:</strong> {{headline.title}}</li>
-      <li><strong>Author:</strong> {{headline.author}}</li>
-      <li><strong>Quelle:</strong> {{headline.source.name}}</li>
-      <li><strong>Datum der Veröffentlichung:</strong> {{headline.publishedAt}}</li>
-      <li><strong>Inhalt:</strong> {{headline.content}}</li>
-    </ul>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+         <strong>{{headline.title}}</strong>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p><strong>Autor:</strong> {{headline.author}}</p>
+      <p><strong>Datum:</strong> {{headline.publishedAt}}</p>
+      <p><strong>Text:</strong> {{headline.content}}</p>
+    </mat-expansion-panel>
   </div>
-
-</table>
+</mat-accordion>
