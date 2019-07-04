@@ -12,6 +12,7 @@ import {ShowSourcesComponent} from './show-sources/show-sources.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ShowHeadlinesFromSourceComponent } from './show-headlines-from-source/show-headlines-from-source.component';
 import {FormsModule} from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/typings/form-field';
 
 
 
@@ -31,7 +32,8 @@ import {FormsModule} from '@angular/forms';
     BrowserAnimationsModule,
     MatButtonModule,
     MatProgressSpinnerModule,
-    FormsModule
+    FormsModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
